@@ -1,0 +1,52 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link href="StyleSheet.css" rel="stylesheet" />
+<title>Final Exam Website</title>
+
+</head>
+
+<body>
+
+    <form id="form1" runat="server"> 
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+         <div id="header">
+		 
+		      <br /><br /><center><h3><b>Final Exam Website</b></h3></center>
+             <br /><br />
+             <center><asp:Label ID="Label1" runat="server" Text=""></asp:Label></center>
+			   
+		 </div>
+		 <!-- End Header -->
+               <!-- Begin Left Column -->
+		 <div id="leftcolumn">
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                <asp:TreeView ID="TreeView1" DataSourceID="SiteMapDataSource1" runat="server" ></asp:TreeView>
+    	 </div>
+		 <!-- End Left Column -->
+		 <!-- Begin Right Column -->
+         <div id="rightcolumn">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+               </asp:ContentPlaceHolder>
+            
+   		 </div>
+		 <!-- End Right Column -->
+
+		 <!-- Begin Footer -->
+		 <div id="footer">	       
+			   <center>Copyright 2013 Brian Schmidt</center>	
+         </div>
+		 <!-- End Footer -->
+   </div>
+   <!-- End Wrapper -->
+
+   </form>
+
+</body>
+</html>
